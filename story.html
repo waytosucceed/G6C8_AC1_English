@@ -1,0 +1,233 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <link rel="icon" type="image/x-icon" href="Logo_last.png">
+      
+        <style>
+          
+          #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 1.28vw;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>   
+        <br>
+        
+        <center>
+            <h2 id="about">Adverbs and its types</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                   <img id="family" src="2.jpg" style="width:100%;"> 
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                   <p id="story" style="text-align:left; width:100%;"> 
+
+
+                    We all like superheroes and always wanted to be like one.
+                    Now imagine you're a superhero, soaring through the sky or battling a
+                    fearsome villain. How would you describe your actions? <br><br>
+
+                    You might say, "I flew <span style="color: blueviolet;">swiftly</span>" or "I fought <span style="color: blueviolet;"> bravely</span>." Those words that
+                    tell us how you did something are called adverbs. <br><br>
+
+                    In very simple language, an <span style="color:blue;font-style: italic;"> adverb </span> is a word that describes a verb. <br><br>
+
+                    They add depth and excitement to our language by describing verbs,
+                    adjectives, and even other adverbs.
+                    
+
+
+                  
+
+
+
+
+
+                    
+                </p> 
+            </div>
+        </center>     
+        </div>
+        <br>
+        <div class="" style="text-align:center;">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+        </div>
+
+        
+            
+
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg","Assets/7.jpg","Assets/8.jpg","Assets/9.jpg","Assets/10.jpg","Assets/11.jpg","Assets/12.jpg","Assets/13.jpg","Assets/14.jpg","Assets/15.jpg","Assets/16.jpg","Assets/17.jpg"];
+
+            var para=[ "Once upon a time, there lived a young artist named Emily. She had always dreamed of creating beautiful masterpieces, but her journey was filled with challenges. Patiently, she practised her craft soon, refining her skills meticulously. <br><br> One sunny morning, Emily decided to venture outdoors and capture the beauty of nature on her canvas. She walked carefully along the riverbank, searching for the perfect spot. Finally, she settled under a towering oak tree, where the sunlight filtered through the leaves delicately.",
+                    
+                       "<span style='font-weight: bolder;font-style:italic;'>'Patiently'</span> describes the way Emily practised her craft, which was with patience. <br><br><span style='font-weight: bolder;font-style:italic;'>'Meticulously' </span> tells us how she refined her skills, which was in a careful and precise manner. <br><br>Both of these words describe how an action is performed and in which manner. That is the reason that both of these words are “Adverbs of manner”.",
+
+                        "<span style='color:blueviolet;font-style:italic;'>Adverbs of manner </span> describe how something happens. For example, is possible to walk or run at different speeds.The words used to describe walking or running at different speeds(quickly or slowly for example) are excellent examples of adverbs of manner. <br><br> Can you spot any other adverbs of manner in the paragraph?",
+
+                        "In this context, 'soon' modifies the verb <span style='color:blue;font-style:italic;'>'practised'</span> and tells us that Emily started practising her craft patiently and meticulously in a relatively short period of time. <br><br> And that is the reason, why “<span style='font-weight: bolder;'>soon</span>” is an “Adverb of time”.",
+
+                        "An <span style='color:blueviolet;font-style:italic;'> adverb of time </span> is a word that describes or modifies when an action occurs. <br><br> It provides information about the timing of an action, helping to answer questions like 'when'. For example: Soon, it will be sunset. <br><br> Examples of “Adverb of time”: Soon now, later, then, tomorrow, today, etc. <br><br>Can you tell any other adverbs of time?",
+
+                        "As she began to paint, her brushstrokes flowed effortlessly across the canvas, expertly blending colours and textures. Slowly but steadily, her vision came to life, and she lost track of time, completely immersed in her work. Occasionally, Emily would pause to admire her progress, filled with a sense of pride and accomplishment. She knew that this painting was truly special, a masterpiece in the making.",
+
+                        "If you will focus, there is an adverb “occasionally” written over here. <br><br> The adverb '<span style='font-weight: bolder;'>Occasionally</span>' tells us that Emily would pause to admire her progress at irregular intervals or from time to time. <br><br> The adverb “occasionally” is an adverb of frequency.",
+
+                        "<span style='color:blueviolet;font-style:italic;'>Adverbs of Frequency </span> indicate how often an action occurs or the regularity with which something happens. <br><br> In easy words “Adverbs of frequency are words that tell how often something happens.” <br><br> <span style='background-color:yellow;color:blue;'> Examples: </span> usually, often, sometimes, rarely, seldom, never, again, etc.",
+
+                        "<span style='color:blue;'>Important note:</span><br>In the sentence, the adverb of frequency usually comes after “be” but before other verbs. <br><br> <span style='background-color:yellow;color:blue;'> For example: </span> <br> ● Correct: 'He is always on time.'<br> ● Incorrect: 'He always is on time.' <br><br>Adverbs of frequency come before the main verb but after auxiliary  verbs.<br> <br> <span style='background-color:yellow;color:blue;'> For example: </span> <br> ● Correct: 'They often play soccer.' <br> ● Incorrect: 'They play often soccer.'",
+
+                        "The phrase “<span style='font-weight: bolder;'>across the canvas</span>” tells us the place or surface where Emily's brushstrokes flowed, which was across the canvas. <br><br> And that is the reason, “across the canvas” is an adverb of place.",
+
+                        "<span style='color:blueviolet;font-style:italic;'>Adverbs of Place </span> indicate the location or position where an action takes place. <br><br> Adverbs of place are normally placed after a sentence's object or main verb.",
+
+                        " <span style='font-size:20px;color:red;'> Placement of Adverbs of Place:</span><br><br><u>After the  <span style='font-weight: bolder;'> object</span></u>:  When there is a direct object, the adverb of place follows the object. <br><br> <span style='color:blue;font-style:italic;'>  Example:</span> 'He put the book on the table.' <br><br> Adverbs of place can be directional. For example: Up, down, around, away, north, southeast, etc. <br><br> Can you tell a few more adverbs of place?",
+
+                        "After hours of dedicated effort, Emily stepped back and gazed upon her creation with a beaming smile. The painting was breathtakingly beautiful, capturing the essence of nature's serenity. Consequently, her hard work had paid off, and she felt an overwhelming sense of joy and satisfaction. Emily's masterpiece soon gained recognition, and she was invited to display her work in a prestigious art gallery. On the night of the exhibition, she stood proudly beside her painting, watching as people marvelled at her talent. It was a moment she had dreamed of for years, and her heart swelled with happiness, knowing that her passion had finally blossomed into success.",
+
+                        "'<span style='font-weight: bolder;'>Breathtakingly</span>' describes the degree or extent to which the painting was beautiful, suggesting that it was extremely or remarkably beautiful. <br><br>'<span style='font-weight: bolder;'>Overwhelming</span>' indicates the intensity or degree of the joy and satisfaction Emily felt, suggesting that it was a very strong or intense emotion. <br><br> And that is the reason they are called “Adverb of degree”.",
+
+                        "<span style='color:blueviolet;font-style:italic;'>Adverbs of Degree </span> indicate the extent, intensity, or degree of an action or quality. <br><br> Adverbs of degree are usually placed before the adjective, adverb, or verb that they modify, although there are some exceptions. <br><br> The words 'too', 'enough', 'very', and 'extremely' are examples of adverbs of degree.",
+
+                        "Before  <span style='color:blueviolet;font-style:italic;'> Adverbs</span>: <br><br>● <span style='background-color:yellow;color:blue;'> Example</span>: He runs quite quickly. <br>● 'Quite' modifies the adverb 'quickly'.<br><br>Before <span style='color:blueviolet;font-style:italic;'> Verbs</span>:<br><br>●<span style='background-color:yellow;color:blue;'> Example</span>: She almost finished her homework.<br>● 'Almost' modifies the verb 'finished.'",
+
+                        "In this sentence, the word '<span style='font-weight: bolder;'>Consequently</span>' introduces the result or consequence of Emily's hard work, joining the two clauses: 'Emily's hard work had paid off' and 'she felt an overwhelming sense of joy and satisfaction.' <br><br> This is the reason, the adverb “consequently” is a “Conjunctive adverb”.",
+
+                        "<span style='color:blueviolet;font-style:italic;'>Conjunctive Adverbs </span> are used to join two independent clauses or sentences, indicating a relationship between them. <br><br> Conjunctive adverbs are also called connective adverbs or linking adverbs. <br><br> Some examples of “conjunctive adverbs” are “accordingly, furthermore, moreover, similarly, also, hence, etc.”",
+
+                    ]
+            
+
+
+
+                    var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "The Blossoming Masterpiece";
+                    document.getElementById("story").innerHTML = "At the Beginning of a Sentence: <br><br>● Place a comma after the conjunctive adverb if it starts a sentence.  <br> ● <span style='background-color:yellow;color:blue;'> Example</span>: <span style='font-weight: bolder;'> However </span>, she decided to go ahead with the plan. <br><br> Within a Sentence: <br><br> ● Use commas to set off the conjunctive adverb when it appears in the middle of a single independent clause. <br> ● <span style='background-color:yellow;color:blue;'> Example</span>: She has, <span style='font-weight: bolder;'> however</span>, changed her mind about the proposal.";
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="The Blossoming Masterpiece"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+           
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Adverbs and its types"
+                    document.getElementById("story").innerHTML = "  We all like superheroes and always wanted to be like one.Now imagine you're a superhero, soaring through the sky or battling a fearsome villain. How would you describe your actions? <br><br> You might say, 'I flew <span style='color: blueviolet;'>swiftly</span>' or 'I fought <span style='color: blueviolet;'> bravely</span>.' Those words that tell us how you did something are called adverbs. <br><br> In very simple language, an <span style='color:blue;font-style: italic;'> adverb </span> is a word that describes a verb. <br><br> They add depth and excitement to our language by describing verbs, adjectives, and even other adverbs. "
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.25vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="The Blossoming Masterpiece"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
